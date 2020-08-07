@@ -19,7 +19,7 @@ jobs:
           uses: docker/build-push-action@v1.1.0
           with:
             repository: ofcoursedude/azure-pipelines-docker-agent
-            path: src/.
+            path: ./src
             # Path to the Dockerfile (Default is '{path}/Dockerfile')
             push: false
     

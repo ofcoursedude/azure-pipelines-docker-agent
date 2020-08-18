@@ -1,0 +1,16 @@
+kind: pipeline
+name: default
+
+steps:
+- name: test
+  image: docker:dind
+  volumes:
+  - name: dockersock
+    path: /var/run/docker.sock
+  commands:
+  - docker build -f src/Dockerfile -t agent src/.
+
+volumes:
+- name: dockersock
+  host:
+    path: /var/run/docker.sock

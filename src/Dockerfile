@@ -41,8 +41,8 @@ RUN apt-get update \
 && apt-get install build-essential \
 && rm -rf /var/lib/apt/lists/*
 
-# install golang 1.14.7
-RUN curl -L https://golang.org/dl/go1.14.7.linux-amd64.tar.gz --output go.tar.gz \
+# install golang 1.15
+RUN curl -L https://golang.org/dl/go1.15.linux-amd64.tar.gz --output go.tar.gz \
 && tar -C /usr/local -xzf go.tar.gz \
 && rm go.tar.gz
 # setup go path

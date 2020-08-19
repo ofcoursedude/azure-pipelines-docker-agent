@@ -5,7 +5,7 @@ A bunch of dev tools packed in an azure pipelines agent for docker:
 - Ubuntu 20.04 LTS
 - .Net Core 3.1 LTS
 - NodeJS 12 LTS
-- Golang 1.14.7
+- Golang 1.15
 - [build-essential apt package](https://packages.ubuntu.com/focal/devel/build-essential)
 - Docker CLI for Docker in Docker builds
 

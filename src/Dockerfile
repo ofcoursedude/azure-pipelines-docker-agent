@@ -34,6 +34,7 @@ RUN curl https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-p
 && dpkg -i packages-microsoft-prod.deb
 RUN apt-get update \
 && apt-get install dotnet-sdk-3.1 \
+&& apt-get install dotnet-sdk-5.0 \
 && rm -rf /var/lib/apt/lists/*
 
 # install build essentials
@@ -41,8 +42,8 @@ RUN apt-get update \
 && apt-get install build-essential \
 && rm -rf /var/lib/apt/lists/*
 
-# install golang 1.15
-RUN curl -L https://golang.org/dl/go1.15.linux-amd64.tar.gz --output go.tar.gz \
+# install golang 1.16
+RUN curl -L https://golang.org/dl/go1.16.4.linux-amd64.tar.gz --output go.tar.gz \
 && tar -C /usr/local -xzf go.tar.gz \
 && rm go.tar.gz
 # setup go path
